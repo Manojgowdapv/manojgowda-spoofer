@@ -1,32 +1,20 @@
-# manojgowda panel 📍
+# Manoj Spoofer
 
-A lightweight, high-performance, root-based location spoofing tool and Xposed module built for Android. 
+Android location-spoofing application/module source project.
 
-## 🌟 Features
-* **Interactive Map UI:** Powered by Leaflet.js and Google Maps tiles directly inside the app.
-* **Universal Hooking:** Works seamlessly across any app scoped within LSPosed (Instagram, WhatsApp, Games, and more).
-* **Live Location Button:** Instantly queries your device's hardware GPS to center the map on your real physical coordinates.
-* **Low-Level Root Bridge:** Communicates efficiently via secure file system routing (`/data/local/tmp/manoj_coords.txt`).
+## Project contents
 
-## 🛠️ Tech Stack
-* **Language:** Java
-* **Frameworks:** Android SDK, Xposed API (LSPosed)
-* **Frontend:** HTML5, Leaflet.js, JavaScript Interface Bridge
-* **Build System:** Gradle (Termux compatible)
+- `app/src/main/java/` — Java source
+- `app/src/main/AndroidManifest.xml` — Android manifest
+- `app/src/main/res/` — app resources and layouts
+- `app/src/main/assets/xposed_init` — Xposed module entry point
+- `app/build.gradle` — Android app build configuration
+- `settings.gradle` — project settings and dependency repositories
 
-## 📱 Requirements
-* A rooted Android device.
-* **LSPosed Framework** installed and active.
-* Android location permissions enabled.
+## Build notes
 
-## ⚙️ Installation & Usage
-1. Download the latest APK from the **Releases** tab.
-2. Install the APK on your rooted device.
-3. Open **LSPosed Manager**, enable **manojgowda panel**, and select your target apps in the scope.
-4. Reboot your device.
-5. Open the app, select your desired fake coordinates on the map, and tap **START**!
+This archive preserves the source and project configuration supplied by the project owner. It excludes generated build output and local Gradle caches.
 
-## 👨‍💻 Developer
-* **Developer:** manojgowda
-* **Contact (WhatsApp Only):** +918150045830
-* **Website:** [gowdahub.com](https://gowdahub.com)
+The supplied `settings.gradle` includes a Termux-specific AAPT2 override. For Android Studio or another environment, remove or update the `android.aapt2FromMavenOverride` setting in `gradle.properties` if it points to a path that does not exist on that device.
+
+The project uses Android Gradle Plugin 8.1.1, compile SDK 34, Java 8 compatibility, and the Xposed API as a compile-only dependency. A compatible Gradle installation/wrapper and Android SDK must be available to build it.
